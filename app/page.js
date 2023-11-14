@@ -1,10 +1,6 @@
 import Boton from "@/components/ui/Boton"
 import Link from "next/link"
 
-
-
-
-
 export const generateMetadata = {
   title: 'E-commerce',
   description: 'App de compras online',
@@ -24,10 +20,12 @@ export default function Home() {
   return (
     <>
       <main className="contenedor">
-        <p className="text-center my-6 border-b-2 border-blue-600">Bienvenidos a mi Ecommerce</p>
+        <p className="text-2xl text-center my-6 border-b-2 border-blue-600 text-primario">Bienvenidos a mi Ecommerce</p>
 
-        <Link href={"/productos/todos"}><Boton>Ver Productos</Boton></Link>
-
+        <Link href={"/productos/todos"} className=''>
+          <p className="bg-primario text-white w-fit p-2 rounded-md shadow-md hover:cursor-pointer ">Ver Productos</p>
+        </Link>
+        
       </main>
     </>
   )

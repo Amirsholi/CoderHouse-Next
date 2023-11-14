@@ -1,20 +1,13 @@
-import QtySelector from "./QtySelector"
+import QtySelector from "../ui/QtySelector"
 import GoBack from "../ui/GoBack"
 import Image from "next/image";
 
 
-const getProductDetail = async (id) => {
-    const response = await
-    fetch(`https://fakestoreapi.com/products/${id}`, {
-        cache: 'force-cache',
-    })
-    return await response.json();
-}
 
 
-const ProductDetail = async (props) => {
+const ProductDetail = ({item}) => {
 
-    const item = await getProductDetail(props.id);
+
 
     return (
         <div className=" container max-w-4xl m-auto">

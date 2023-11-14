@@ -4,7 +4,7 @@ import Link from "next/link"
 const ProductCard = ({ item }) => {
 
     return (
-        <article className="w-full h-[250px] shadow-sm rounded hover:shadow-lg hover:scale-110 ease-in duration-300 ">
+        <article className=" p-2 border w-full h-[200px] shadow-sm rounded hover:shadow-lg hover:scale-110 ease-in duration-300 ">
             <Link href={`/detalle/${item.id}`}
                 className="flex flex-col"
             >
@@ -13,7 +13,7 @@ const ProductCard = ({ item }) => {
                     src={item.image}
                     width={288}
                     height={288}
-                    className={"w-full h-[180px] object-contain"}
+                    className={"w-full h-[120px] object-contain"}
                 />
 
                 <div className="px-4 border-t border-gray-200">
